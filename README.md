@@ -3,7 +3,7 @@
 ### How to install
 
 ```
-    $ git clone https://gitlab.com/swciitg/iitgcms.git
+    $ git clone https://github.com/rohanaggarwal7997/IITG-CMS.git
     $ cd iitgcms
     $ virtualenv swciitg
     $ source swciitg/bin/activate
