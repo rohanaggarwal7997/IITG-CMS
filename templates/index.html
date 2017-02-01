@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Events!</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Event Name</th>
+            <th>Event description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+        <tr>
+            <th scope="row">{{ event.id }}</th>
+            <td>{{ event.title }}</td>
+            <td>{{ event.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    Achievements
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for x in achievement %}
+        <tr>
+            <th scope="row">{{ x.id }}</th>
+            <td>{{ x.title }}</td>
+            <td>{{ x.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    News
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for x in news %}
+        <tr>
+            <th scope="row">{{ x.id }}</th>
+            <td>{{ x.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    Director's Desk
+    <br><br>
+    {{ description }}
+    <br>
+    <br>
+
+
+    Initiatives
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for x in init %}
+        <tr>
+            <th scope="row">{{ x.id }}</th>
+            <td>{{ x.description }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Achievement {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <h1>Add Achievement</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+
+    <br><br>
+{% endblock %}

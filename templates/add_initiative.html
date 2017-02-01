@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Initiative {% endblock %}
+
+{% block content %}
+    <h1>Add Initiative</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+
+    <br><br>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'index' %}">IIT Guwahati</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'add_event' %}">Add Event</a></li>
+            <li><a href={% url 'add_achievement' %}>Add Achievement</a></li>
+            <li><a href={% url 'add_news' %}>Add News</a></li>
+            <li><a href={% url 'cddesk' %}>Change Director's Desk</a></li>
+            <li><a href={% url 'add_initiative' %}>Add initiative</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
