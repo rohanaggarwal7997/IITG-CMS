@@ -12,4 +12,5 @@
     $ python manage.py migrate
     $ python manage.py createsuperuser
     $ python manage.py runserver
-```
+``` $ For making the director desk work , initialize one entry in the database with primary key 1 (important or 404 not found will come)
+        It is registered on admin section.
